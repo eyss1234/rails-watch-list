@@ -1,9 +1,10 @@
-<div class="mt-5">
+<div>
   <%= render "partials/banner" %>
-  <h1>List</h1>
-  <ul>
+  <div class="container mt-5">
+  <ul class="cards">
     <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
+      <div class="card-category"><li><%= link_to list.name, list_path(list) %></li></div>
     <% end %>
   </ul>
+  </div>
 </div>
