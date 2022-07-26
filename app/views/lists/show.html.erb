@@ -1,5 +1,6 @@
 <div class="container mt-5">
   <h2 style="font-weight: bold"><%= @list.name %></h2>
+  
   <div>
     <% @list.bookmarks.each do |bookmark| %>
       <p  class="border-bottom"><%= bookmark.comment %></p>
