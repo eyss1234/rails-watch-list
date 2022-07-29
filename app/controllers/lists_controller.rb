@@ -1,4 +1,5 @@
 class ListsController < ApplicationController
+
   def index
     @lists = List.all
   end
@@ -20,6 +21,11 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    List.find(params[:id]).destroy
+    redirect_to lists_path, status: :see_other
+  end
+
   private
 
   def list_params
@@ -27,3 +33,5 @@ class ListsController < ApplicationController
   end
 
 end
+
+

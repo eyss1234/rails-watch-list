@@ -1,12 +1,12 @@
-<div>
-  <%= render "partials/banner" %>
-  <div class="container mt-5">
-  <ul class="cards">
-    <% @lists.each do |list| %>
-      <div class="card-category"><%= link_to list.name, list_path(list)%></div>
-    <% end %>
-  </ul>
-  </div>
-</div>
+<%= render "partials/banner" %>
 
-<%= cl_image_tag("relaxing_wvkjzh", width: 400, height: 300, crop: :fill) %>
+<div class="container cards mt-5 "> 
+  <% @lists.each do |list| %>  
+    <div class= "card-category">
+      <a class= "text-decoration-none text-white" href= "<%=list_path(list) %>" >
+      <%= cl_image_tag list.photo.key, crop: :fill %>
+      <h2><%= list.name %></h2>
+    </div>
+  </a>
+  <% end %>
+</div>

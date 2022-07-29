@@ -1,0 +1,8 @@
+ <div class="mt-5 container">
+  <h2>New List</h2>
+  <%= simple_form_for(@list) do |f|%>
+    <%= f.input :name, placeholder: "List Name" %>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit, class: "btn-outline-primary text-center" %>
+  <% end %>
+</div>
